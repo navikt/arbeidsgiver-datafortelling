@@ -1,0 +1,19 @@
+# IntelliJ
+.idea/
+
+# OS generated files
+.DS_Store
+
+# Python environments
+.env
+.venv
+env/
+venv/
+
+# Quarto generated files
+/index.html
+/index.ipynb
+index_files/
+
+# Jupyter Notebook
+.ipynb_checkpoints
