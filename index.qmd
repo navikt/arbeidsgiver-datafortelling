@@ -1,0 +1,37 @@
+---
+title: "Operative mål til PO Arbeidsgiver"
+execute:
+    echo: false
+    warning: false
+format:
+    html:
+        toc: true
+        toc-title: Operative mål
+        page-layout: full
+        embed-resources: true
+jupyter: python3
+---
+
+## Forståelig innhold
+Innholdet på nav.no/bedrift er forståelig og ivaretar arbeidsgivernes behov.
+
+## Lykkes med inkludering
+Flere arbeidsgivere lykkes med Inkludering.
+
+## Relevant IA-støtte
+Like mange, eller flere arbeidsgivere som mottar virksomhetsstøtte knyttet til inkluderende arbeidsliv, opplever støtten som relevant og tilpasset virksomhetens behov.
+
+## Regelmessig IA
+Arbeidsgiver jobber regelmessig med å forebygge og redusere fravær.
+
+## Kunnskap om IA-effekt
+NAV har like god, eller bedre kunnskap om effekten av støtten arbeidsgiver har mottatt knyttet til inkluderende arbeidsliv.
+
+---
+
+```{python}
+from datetime import datetime
+import pytz
+now = datetime.now(pytz.timezone("Europe/Oslo"))
+print(f"Denne siden ble generert {now:%d.%m.%Y %H:%M}")
+```
