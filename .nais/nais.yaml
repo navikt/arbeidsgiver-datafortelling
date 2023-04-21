@@ -6,7 +6,7 @@ metadata:
   labels:
     team: arbeidsgiver-data
   name: arbeidsgiver-datafortelling
-  namespace: pia
+  namespace: arbeidsgiver-data
 spec:
   image: {{ image }}
   resources:
