@@ -1,0 +1,19 @@
+apiVersion: nais.io/v1
+kind: Naisjob
+metadata:
+  annotations:
+    nais.io/read-only-file-system: "false"
+  labels:
+    team: arbeidsgiver-data
+  name: arbeidsgiver-datafortelling
+  namespace: pia
+spec:
+  image: {{ image }}
+  resources:
+    limits:
+      memory: 8Gi
+    requests:
+      memory: 1Gi
+  ttlSecondsAfterFinished: 340
+  schedule: "*/30 7-17 * * *"
+  backoffLimit: 2
