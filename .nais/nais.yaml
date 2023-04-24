@@ -17,3 +17,10 @@ spec:
   ttlSecondsAfterFinished: 340
   schedule: "*/30 7-17 * * *"
   backoffLimit: 2
+  envFrom:
+    - secret: arbeidsgiver-nada-secret # value is the secret name in Google Secret Manager
+  env:
+    - name: NADA_HOST
+      value: nada.intern.nav.no
+    - name: QUARTO_ID
+      value: 53cb8677-59b8-4de4-86bc-7bfff29d39cd
