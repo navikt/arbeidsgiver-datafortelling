@@ -24,6 +24,18 @@ Like mange, eller flere arbeidsgivere som mottar virksomhetsstøtte knyttet til 
 ## Regelmessig IA
 Arbeidsgiver jobber regelmessig med å forebygge og redusere fravær.
 
+```{python}
+from google.cloud.bigquery import Client
+
+PROJECT = "teamia-prod-df3d"
+DATASET = "ia_tjenester_metrikker"
+TABLE = "IA-tjenester-metrikker"
+SQL_QUERY = f"SELECT  * FROM `{PROJECT}.{DATASET}.{TABLE}`"
+
+bq_client = Client(project=PROJECT)
+data = bq_client.query(query=SQL_QUERY).to_dataframe()
+```
+
 ## Kunnskap om IA-effekt
 NAV har like god, eller bedre kunnskap om effekten av støtten arbeidsgiver har mottatt knyttet til inkluderende arbeidsliv.
 
