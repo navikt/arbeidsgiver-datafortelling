@@ -15,12 +15,6 @@ jupyter: python3
 ## Forståelig innhold
 Innholdet på nav.no/bedrift er forståelig og ivaretar arbeidsgivernes behov.
 
-## Lykkes med inkludering
-Flere arbeidsgivere lykkes med Inkludering.
-
-## Relevant IA-støtte
-Like mange, eller flere arbeidsgivere som mottar virksomhetsstøtte knyttet til inkluderende arbeidsliv, opplever støtten som relevant og tilpasset virksomhetens behov.
-
 ## Regelmessig IA
 Arbeidsgiver jobber regelmessig med å forebygge og redusere fravær.
 
@@ -38,8 +32,14 @@ bq_client = Client(FELLES_PROJECT)
 data = bq_client.query(query=SQL_QUERY).to_dataframe()
 ```
 
+## Relevant IA-støtte
+Like mange, eller flere arbeidsgivere som mottar virksomhetsstøtte knyttet til inkluderende arbeidsliv, opplever støtten som relevant og tilpasset virksomhetens behov.
+
 ## Kunnskap om IA-effekt
 NAV har like god, eller bedre kunnskap om effekten av støtten arbeidsgiver har mottatt knyttet til inkluderende arbeidsliv.
+
+## Lykkes med inkludering
+Flere arbeidsgivere lykkes med Inkludering.
 
 ---
 
