@@ -35,7 +35,7 @@ data = bq_client.query(query=SQL_QUERY).to_dataframe()
 ## Relevant IA-støtte
 Like mange, eller flere arbeidsgivere som mottar virksomhetsstøtte knyttet til inkluderende arbeidsliv, opplever støtten som relevant og tilpasset virksomhetens behov.
 
-## Kunnskap om IA-effekt
+## Kunnskap om IA-samarbeid
 NAV har like god, eller bedre kunnskap om effekten av støtten arbeidsgiver har mottatt knyttet til inkluderende arbeidsliv.
 
 ## Lykkes med inkludering
