@@ -32,7 +32,9 @@ DATASET = "ia_tjenester_metrikker"
 TABLE = "IA-tjenester-metrikker"
 SQL_QUERY = f"SELECT  * FROM `{PROJECT}.{DATASET}.{TABLE}`"
 
-bq_client = Client()
+FELLES_PROJECT = "arbeidsgiver-data-prod-bb88"
+
+bq_client = Client(FELLES_PROJECT)
 data = bq_client.query(query=SQL_QUERY).to_dataframe()
 ```
 
