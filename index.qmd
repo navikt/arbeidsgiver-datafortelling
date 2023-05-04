@@ -29,12 +29,10 @@ from google.cloud.bigquery import Client
 
 PROJECT = "teamia-prod-df3d"
 DATASET = "ia_tjenester_metrikker"
-TABLE = "IA-tjenester-metrikker"
+TABLE = "metrikker_ia_tjenester_innlogget"
 SQL_QUERY = f"SELECT  * FROM `{PROJECT}.{DATASET}.{TABLE}`"
 
-FELLES_PROJECT = "arbeidsgiver-data-prod-bb88"
-
-bq_client = Client(FELLES_PROJECT)
+bq_client = Client()
 data = bq_client.query(query=SQL_QUERY).to_dataframe()
 ```
 
