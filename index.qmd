@@ -15,6 +15,10 @@ jupyter: python3
 ## Forståelig innhold
 Innholdet på nav.no/bedrift er forståelig og ivaretar arbeidsgivernes behov.
 
+[Min side Arbeidsgiver](https://analytics.eu.amplitude.com/nav/dashboard/7ybsqtg)
+
+[Notifikasjoner](https://metabase.intern.nav.no/dashboard/214-notifikasjoner?relative_date=past7days)
+
 ## Regelmessig IA
 Arbeidsgiver jobber regelmessig med å forebygge og redusere fravær.
 
@@ -32,14 +36,24 @@ bq_client = Client(FELLES_PROJECT)
 data = bq_client.query(query=SQL_QUERY).to_dataframe()
 ```
 
+[Leverte digitale IA-tjenester](https://data.intern.nav.no/story/3f485566-49fc-4867-937e-618293158ef8).
+
+[IA key metrics](https://data.intern.nav.no/quarto/2f6249ef-67bc-4fe6-bd35-502f2e739c4e)
+
 ## Relevant IA-støtte
 Like mange, eller flere arbeidsgivere som mottar virksomhetsstøtte knyttet til inkluderende arbeidsliv, opplever støtten som relevant og tilpasset virksomhetens behov.
 
 ## Kunnskap om IA-samarbeid
 NAV har like god, eller bedre kunnskap om effekten av støtten arbeidsgiver har mottatt knyttet til inkluderende arbeidsliv.
 
+[Fia datafortelling](https://data.intern.nav.no/quarto/6e8d4a02-f303-49ae-92ca-b4a4cada5bc6).
+
+[Fia datakvalitet](https://data.intern.nav.no/quarto/f3f044e9-5cd7-456a-90a8-00a42f276af0).
+
 ## Lykkes med inkludering
 Flere arbeidsgivere lykkes med Inkludering.
+
+[Rekrutteringsbistands metrikker](https://grafana.nais.io/d/9HNRaRJ4z/toi).
 
 ---
 
