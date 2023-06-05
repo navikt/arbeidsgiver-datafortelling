@@ -20,7 +20,7 @@ spec:
   accessPolicy:
     outbound:
       external:
-      - host: https://nada.intern.nav.no
+      - host: nada.intern.nav.no
   gcp:
     bigQueryDatasets:
       - name: ia_tjenester_metrikker
