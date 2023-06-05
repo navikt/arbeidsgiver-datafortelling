@@ -29,6 +29,6 @@ spec:
     - secret: arbeidsgiver-nada-secret # value is the secret name in Google Secret Manager
   env:
     - name: NADA_HOST
-      value: nada.intern.nav.no
+      value: {{ nada_host }}
     - name: QUARTO_ID
-      value: 53cb8677-59b8-4de4-86bc-7bfff29d39cd
+      value: {{ quarto_id }}
