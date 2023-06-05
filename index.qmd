@@ -62,12 +62,3 @@ NAV har like god, eller bedre kunnskap om effekten av støtten arbeidsgiver har 
 Flere arbeidsgivere lykkes med Inkludering.
 
 [Rekrutteringsbistands metrikker](https://grafana.nais.io/d/9HNRaRJ4z/toi).
-
----
-
-```{python}
-from datetime import datetime
-import pytz
-now = datetime.now(pytz.timezone("Europe/Oslo"))
-print(f"Denne siden ble generert {now:%d.%m.%Y %H:%M}")
-```
