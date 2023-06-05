@@ -1,5 +1,13 @@
 ---
-title: "Operative mål til PO Arbeidsgiver"
+title: "Produktområde arbeidsgiver"
+subtitle: "Vi skaper tillit og tjenester arbeidsgivere trenger for å inkludere."
+title-block-banner: true
+title-block-banner-color: white
+date: now
+date-format: "DD.MM.YYYY HH:mm:ss z"
+published-title: "Oppdatert"
+author: Produktområde arbeidsgiver (POAG)
+author-title: "Eier"
 execute:
     echo: false
     warning: false
