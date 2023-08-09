@@ -1,7 +1,2 @@
 nada_host: data.nav.no
 quarto_id: 53cb8677-59b8-4de4-86bc-7bfff29d39cd
-felles_project = "arbeidsgiver-data-prod-bb88"
-
-ia_project = "teamia-prod-df3d"
-ia_dataset = "ia_tjenester_metrikker"
-ia_table = "metrikker_ia_tjenester_innlogget"
