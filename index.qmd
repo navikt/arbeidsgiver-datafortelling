@@ -1,64 +1,29 @@
 ---
-title: "Produktområde arbeidsgiver"
-subtitle: "Vi skaper tillit og tjenester arbeidsgivere trenger for å inkludere."
-title-block-banner: true
-title-block-banner-color: white
-date: now
-date-format: "DD.MM.YYYY HH:mm:ss z"
-published-title: "Oppdatert"
-author: Produktområde arbeidsgiver (POAG)
-author-title: "Eier"
+title: "Produktområde Arbeidsgiver"
 execute:
     echo: false
     warning: false
 format:
-    html:
-        toc: true
-        toc-title: Operative mål
-        page-layout: full
+    dashboard:
         embed-resources: true
+        nav-buttons:
+            - icon: github
+              href: https://github.com/navikt/arbeidsgiver-datafortelling
+            - icon: slack
+              href: 'https://nav-it.slack.com/archives/CCM649PDH'
 jupyter: python3
 ---
 
-## Forståelig innhold
-Innholdet på nav.no/bedrift er forståelig og ivaretar arbeidsgivernes behov.
+# Operative mål 2024
 
-[Min side Arbeidsgiver](https://analytics.eu.amplitude.com/nav/dashboard/7ybsqtg)
+## Row
+Arbeidsgivere får tak i relevant arbeidskraft når de kontakter NAV for rekruttering og inkludering
 
-[Notifikasjoner](https://metabase.intern.nav.no/dashboard/214-notifikasjoner?relative_date=past7days)
+## Row
+Arbeidsgivere opplever en mer koordinert og relevant NAV i samhandling om skaffe arbeid, beholde arbeid og omstilling
 
-## Regelmessig IA
-Arbeidsgiver jobber regelmessig med å forebygge og redusere fravær.
+## Row
+Vi bruker et språk på nav.no/arbeidsgiver som arbeidsgivere forstår og har en struktur som gjør det enkelt for arbeidsgivere å finne det de leter etter
 
-```{python}
-from google.cloud.bigquery import Client
-
-PROJECT = "teamia-prod-df3d"
-DATASET = "ia_tjenester_metrikker"
-TABLE = "metrikker_ia_tjenester_innlogget"
-SQL_QUERY = f"SELECT  * FROM `{PROJECT}.{DATASET}.{TABLE}`"
-
-FELLES_PROJECT = "arbeidsgiver-data-prod-bb88"
-
-bq_client = Client(FELLES_PROJECT)
-data = bq_client.query(query=SQL_QUERY).to_dataframe()
-```
-
-[Leverte digitale IA-tjenester](https://data.intern.nav.no/story/3f485566-49fc-4867-937e-618293158ef8)
-
-[IA key metrics](https://data.intern.nav.no/quarto/2f6249ef-67bc-4fe6-bd35-502f2e739c4e)
-
-## Relevant IA-støtte
-Like mange, eller flere arbeidsgivere som mottar virksomhetsstøtte knyttet til inkluderende arbeidsliv, opplever støtten som relevant og tilpasset virksomhetens behov.
-
-## Kunnskap om IA-samarbeid
-NAV har like god, eller bedre kunnskap om effekten av støtten arbeidsgiver har mottatt knyttet til inkluderende arbeidsliv.
-
-[Fia datafortelling](https://data.intern.nav.no/quarto/6e8d4a02-f303-49ae-92ca-b4a4cada5bc6)
-
-[Fia datakvalitet](https://data.intern.nav.no/quarto/f3f044e9-5cd7-456a-90a8-00a42f276af0)
-
-## Lykkes med inkludering
-Flere arbeidsgivere lykkes med Inkludering.
-
-[Rekrutteringsbistands metrikker](https://grafana.nais.io/d/9HNRaRJ4z/toi)
+## Row
+Vi skal gjøre det lettere for NAV-ansatte å kartlegge arbeidsgivers behov, og evaluere den tidsbegrensende og målrettede innsatsen
