@@ -152,30 +152,6 @@ Key results:
 - K3: 80% av IA-rådgivere som har brukt løsningen skal oppleve kartlegging som enklere å ta i bruk.
 - K4: 70% av IA-rådgivere som har brukt løsningen synes kartleggingsløsningen bidrar til å velge mer treffsikre tiltak.
 
-
-```{python}
-#| title: Graf eksempel
-#| output: false
-import plotly.graph_objs as go
-pia_fig1 = go.Figure()
-pia_fig1.add_trace(go.Line(x=["jan", "feb", "mar", "apr", "mai", "jun", "juli", "aug", "sep", "okt", "nov", "des"], y=[2]*12, name='Mål', line=dict(dash='dash')))
-pia_fig1.add_trace(go.Scatter(x=["jan"], y=[14], name='Faktisk'))
-pia_fig1.update_yaxes(range=[0, 15])
-pia_fig1.update_scenes(aspectmode="manual", aspectratio=dict(y=1))
-```
-
-## Row
-
-```{python}
-#| title: Gjennomsnittstid fra virksomheten starter kartlegging til den er gjennomført
-pia_fig1.show()
-```
-
-```{python}
-#| title: G2
-pia_fig1.show()
-```
-
 ## Row
 
 **Mål 1. tertial:** IA-rådgivere skal kunne identifisere behov for IA-tjenester på partssamarbeidet i Fia sammen med virksomheter uten avdelinger på en enkel og treffsikker måte.
