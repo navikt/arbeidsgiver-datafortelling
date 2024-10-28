@@ -1,0 +1,59 @@
+# Utkast felles dashboard
+
+```{python}
+from google.cloud.bigquery import Client
+import plotly.graph_objects as go
+
+project = "arbeidsgiver-data-prod-bb88"
+bq_client = Client(project)
+
+query = "select * from `pia-prod-85b2.pia_bigquery_sink_v1_dataset_prod.pia_til_po_felles_dashboard`"
+df_pia = bq_client.query(query=query).to_dataframe()
+```
+
+## Row
+```{python}
+#| title: Antall opprettet og fullført behovsvurdering i Fia
+fig = go.Figure()
+fig = fig.add_trace(
+    go.Scatter(
+        x=df_pia.maaned,
+        y=df_pia.antall_opprettet_behovsvurdering,
+        mode="lines+markers",
+        name="Opprettet behovsvurdering"
+    )
+)
+fig = fig.add_trace(
+    go.Scatter(
+        x=df_pia.maaned,
+        y=df_pia.antall_fullfort_behovsvurdering,
+        mode="lines+markers",
+        name="Fullført behovsvurdering"
+    )
+)
+fig = fig.update_layout(
+    xaxis_title="Måned",
+    yaxis_title="Antall"
+)
+fig.show()
+```
+
+```{python}
+#| title: Test
+fig = go.Figure()
+fig.show()
+```
+
+## Row
+
+```{python}
+#| title: Test
+fig = go.Figure()
+fig.show()
+```
+
+```{python}
+#| title: Test
+fig = go.Figure()
+fig.show()
+```

@@ -28,3 +28,5 @@ Vi bruker et språk på nav.no/arbeidsgiver som arbeidsgivere forstår og har en
 ::: {.valuebox color="light"}
 Vi skal gjøre det lettere for NAV-ansatte å kartlegge arbeidsgivers behov, og evaluere den tidsbegrensende og målrettede innsatsen.
 :::
+
+{{< include felles_dashboard.qmd >}}
