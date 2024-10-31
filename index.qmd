@@ -29,4 +29,14 @@ Vi bruker et språk på nav.no/arbeidsgiver som arbeidsgivere forstår og har en
 Vi skal gjøre det lettere for NAV-ansatte å kartlegge arbeidsgivers behov, og evaluere den tidsbegrensende og målrettede innsatsen.
 :::
 
-{{< include felles_dashboard.qmd >}}
+```{python}
+from google.cloud.bigquery import Client
+import plotly.graph_objects as go
+
+project = "arbeidsgiver-data-prod-bb88"
+bq_client = Client(project)
+```
+
+{{< include min_side_arbeidsgiver.qmd >}}
+
+{{< include fia.qmd >}}

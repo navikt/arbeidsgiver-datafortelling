@@ -1,14 +1,8 @@
-# Utkast felles dashboard
+# Fia - Fagsystem for IA
 
 ```{python}
-from google.cloud.bigquery import Client
-import plotly.graph_objects as go
-
-project = "arbeidsgiver-data-prod-bb88"
-bq_client = Client(project)
-
-query = "select * from `pia-prod-85b2.pia_bigquery_sink_v1_dataset_prod.pia_til_po_felles_dashboard`"
-df_pia = bq_client.query(query=query).to_dataframe()
+query_pia = "select * from `pia-prod-85b2.pia_bigquery_sink_v1_dataset_prod.pia_til_po_felles_dashboard`"
+df_pia = bq_client.query(query=query_pia).to_dataframe()
 ```
 
 ## Row
@@ -35,25 +29,5 @@ fig = fig.update_layout(
     xaxis_title="Måned",
     yaxis_title="Antall"
 )
-fig.show()
-```
-
-```{python}
-#| title: Test
-fig = go.Figure()
-fig.show()
-```
-
-## Row
-
-```{python}
-#| title: Test
-fig = go.Figure()
-fig.show()
-```
-
-```{python}
-#| title: Test
-fig = go.Figure()
 fig.show()
 ```

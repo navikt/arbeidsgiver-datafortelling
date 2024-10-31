@@ -1,0 +1,53 @@
+# Min side Arbeidsgiver
+
+```{python}
+query_fager = "select * from `fager-prod-dd77.notifikasjon_platform_dataset.fager_til_po_felles_dashboard`"
+df_fager = bq_client.query(query=query_fager).to_dataframe()
+```
+
+## Row
+
+::: {.panel-tabset}
+
+## Totalt
+```{python}
+#| title: Antall eksterne varsler sendt til Min side Arbeidsgiver
+totalt_antall_varsler = df_fager.groupby("month")["count"].sum()
+fig = go.Figure()
+fig = fig.add_trace(
+    go.Scatter(
+        x=totalt_antall_varsler.index,
+        y=totalt_antall_varsler.values,
+        mode="lines",
+    )
+)
+fig = fig.update_layout(
+    xaxis_title="Måned",
+    yaxis_title="Antall eksterne varsler sendt",
+)
+fig.show()
+```
+
+## Per merkelapp
+```{python}
+#| title: Antall eksterne varsler sendt til Min side Arbeidsgiver
+df_fager_2024 = df_fager[df_fager.month.str.startswith("2024")]
+fig = go.Figure()
+for merkelapp in df_fager_2024.merkelapp.unique():
+    fig = fig.add_trace(
+        go.Scatter(
+            x=df_fager_2024.loc[df_fager_2024.merkelapp == merkelapp, "month"],
+            y=df_fager_2024.loc[df_fager_2024.merkelapp == merkelapp, "count"],
+            mode="lines",
+            name=merkelapp,
+        )
+    )
+fig = fig.update_layout(
+    title="Vises kun 2024",
+    xaxis_title="Måned",
+    yaxis_title="Antall eksterne varsler sendt",
+)
+fig.show()
+```
+
+:::
