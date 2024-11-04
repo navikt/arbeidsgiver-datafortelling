@@ -27,6 +27,8 @@ spec:
         permission: READ
       - name: pia_til_po_felles_dashboard
         permission: READ
+      - name: pia_bigquery_sink_v1_dataset_prod
+        permission: READ
   envFrom:
     - secret: arbeidsgiver-nada-secret # value is the secret name in Google Secret Manager
   env:
