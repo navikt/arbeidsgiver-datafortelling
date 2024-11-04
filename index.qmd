@@ -6,6 +6,7 @@ execute:
 format:
     dashboard:
         embed-resources: true
+        scrolling: true
         nav-buttons:
             - icon: github
               href: https://github.com/navikt/arbeidsgiver-datafortelling
