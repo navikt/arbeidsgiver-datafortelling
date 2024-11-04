@@ -25,8 +25,6 @@ spec:
     bigQueryDatasets:
       - name: notifikasjon_platform_dataset
         permission: READ
-      - name: pia_til_po_felles_dashboard
-        permission: READ
       - name: pia_bigquery_sink_v1_dataset_prod
         permission: READ
   envFrom:

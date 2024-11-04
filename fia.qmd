@@ -1,12 +1,12 @@
 # Fia - Fagsystem for IA
 
 ```{python}
-query = "select * from `pia-prod-85b2.pia_til_po_felles_dashboard.antall_saker_i_bistand`"
+query = "select * from `pia-prod-85b2.pia_bigquery_sink_v1_dataset_prod.antall_saker_i_bistand`"
 df = bq_client.query(query=query).to_dataframe()
 antall_saker_i_bistand = int(df.antall_saker_i_bistand[0])
 sum_antall_personer = int(df.sum_antall_personer[0])
 
-query = "select * from `pia-prod-85b2.pia_til_po_felles_dashboard.antall_behovsvurdering_per_maaned`"
+query = "select * from `pia-prod-85b2.pia_bigquery_sink_v1_dataset_prod.antall_behovsvurdering_per_maaned`"
 antall_behovsvurdering_per_maaned = bq_client.query(query=query).to_dataframe()
 ```
 
