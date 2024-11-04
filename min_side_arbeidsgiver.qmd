@@ -11,7 +11,7 @@ df_fager = bq_client.query(query=query_fager).to_dataframe()
 
 ## Totalt
 ```{python}
-#| title: Antall eksterne varsler sendt til Min side Arbeidsgiver
+#| title: Antall eksterne varsler sendt
 totalt_antall_varsler = df_fager.groupby("month")["count"].sum()
 fig = go.Figure()
 fig = fig.add_trace(
@@ -38,7 +38,7 @@ for merkelapp in df_fager_2024.merkelapp.unique():
         go.Scatter(
             x=df_fager_2024.loc[df_fager_2024.merkelapp == merkelapp, "month"],
             y=df_fager_2024.loc[df_fager_2024.merkelapp == merkelapp, "count"],
-            mode="lines",
+            mode="lines+markers",
             name=merkelapp,
         )
     )
