@@ -1,26 +1,54 @@
 # Fia - Fagsystem for IA
 
 ```{python}
-query_pia = "select * from `pia-prod-85b2.pia_bigquery_sink_v1_dataset_prod.pia_til_po_felles_dashboard`"
-df_pia = bq_client.query(query=query_pia).to_dataframe()
+query = "select * from `pia-prod-85b2.pia_til_po_felles_dashboard.antall_saker_i_bistand`"
+df = bq_client.query(query=query).to_dataframe()
+antall_saker_i_bistand = int(df.antall_saker_i_bistand[0])
+sum_antall_personer = int(df.sum_antall_personer[0])
+
+query = "select * from `pia-prod-85b2.pia_til_po_felles_dashboard.antall_behovsvurdering_per_maaned`"
+antall_behovsvurdering_per_maaned = bq_client.query(query=query).to_dataframe()
 ```
 
 ## Row
 ```{python}
-#| title: Antall opprettet og fullført behovsvurdering i Fia
+#| component: valuebox
+#| title: Antall saker i status "Vi bistår"
+dict(
+    color = "light",
+    value = f"{antall_saker_i_bistand:,}".replace(",", " ")
+)
+```
+
+```{python}
+#| component: valuebox
+#| title: Totalt antall personer påvirket av saker i status "Vi bistår"
+dict(
+    color = "light",
+    value = f"{sum_antall_personer:,}".replace(",", " ")
+)
+```
+
+::: {.valuebox color="light"}
+For mer info om Fia, sjekk [Fia datafortelling](https://data.ansatt.nav.no/story/6e8d4a02-f303-49ae-92ca-b4a4cada5bc6/index.html).
+:::
+
+## Row
+```{python}
+#| title: Antall opprettet og fullført behovsvurdering
 fig = go.Figure()
 fig = fig.add_trace(
     go.Scatter(
-        x=df_pia.maaned,
-        y=df_pia.antall_opprettet_behovsvurdering,
+        x=antall_behovsvurdering_per_maaned.maaned,
+        y=antall_behovsvurdering_per_maaned.antall_opprettet_behovsvurdering,
         mode="lines+markers",
         name="Opprettet behovsvurdering"
     )
 )
 fig = fig.add_trace(
     go.Scatter(
-        x=df_pia.maaned,
-        y=df_pia.antall_fullfort_behovsvurdering,
+        x=antall_behovsvurdering_per_maaned.maaned,
+        y=antall_behovsvurdering_per_maaned.antall_fullfort_behovsvurdering,
         mode="lines+markers",
         name="Fullført behovsvurdering"
     )
