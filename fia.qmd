@@ -1,5 +1,13 @@
 # Fia - Fagsystem for IA
 
+## Row
+
+::: {.callout-note}
+<span style="color:red;">
+NB! Dette er ikke offisiell statistikk og må ikke deles utenfor NAV.
+</span>
+:::
+
 ```{python}
 query = "select * from `pia-prod-85b2.pia_bigquery_sink_v1_dataset_prod.pia_til_felles_dashboard_saker_i_bistand`"
 df = bq_client.query(query=query).to_dataframe()

@@ -1,5 +1,13 @@
 # Min side Arbeidsgiver
 
+## Row
+
+::: {.callout-note}
+<span style="color:red;">
+NB! Dette er ikke offisiell statistikk og må ikke deles utenfor NAV.
+</span>
+:::
+
 ```{python}
 query_fager = "select * from `fager-prod-dd77.notifikasjon_platform_dataset.fager_til_po_felles_dashboard`"
 df_fager = bq_client.query(query=query_fager).to_dataframe()
