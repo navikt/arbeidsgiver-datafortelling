@@ -17,19 +17,101 @@ format:
 jupyter: python3
 ---
 
-# Operative mål 2024
+# Forsiden
+
+::: {.valuebox color="light"}
+**Vi skaper tillit og tjenester arbeidsgivere trenger for å inkludere.**
+
+Målet er at tjenestene fra NAV skal oppleves som brukervennlige, koordinerte og effektive slik at det blir enklere for arbeidsgivere å
+
+- ansette og inkludere utsatte personer
+- forebygge sykefravær og hindre frafall
+- ha god dialog og relasjon med NAV
+
+Mer info om PO Arbeidsgiver i [Navet](https://navno.sharepoint.com/sites/intranett-produktomrader-og-prosjekter/SitePages/Produktomr%C3%A5de-arbeidsgiver.aspx).
+:::
 
 ## Row
 ::: {.valuebox color="light"}
-Arbeidsgivere opplever en mer koordinert og relevant NAV i samhandling om skaffe arbeid, beholde arbeid og omstilling.
+**Produkter fordelt på fagområde**
+
+- Min side Arbeidsgiver
+  - Binder sammen alle innloggede tjenester som andre team lager for arbeidsgiver.
+- Fia (Fagsystem for IA)
+  - Fia skal gi mer målrettet og profesjonalisert oppfølging av virksomhetene som er prioritert for IA-bistand fra NAV.
+- Salesforce Arbeidsgiver
+  - CRM-løsning som gir oversikt over NAVs relasjon til arbeidsgiverne. Oversikten legger til rette for bedre dialog og samhandling mellom NAV og arbeidsgiverne.
+- Rekrutteringsbistand (flyttet til team Arbeidsmarked)
+:::
+
+
+# Operative mål 2025
+
+## Row
+::: {.valuebox color="light"}
+**NAVs ambisjoner 2030**
+
+Vi mobiliserer arbeidskraft i et arbeidsliv i omstilling.
+:::
+
+## Row
+::: {.valuebox color="light"}
+**3-årige prioriteringer 2023-2025**
+
+Arbeidsgivere får tjenester som støtter behov og omstillingsprosesser i virksomhetene.
+:::
+
+## Row
+::: {.valuebox color="primary"}
+**Operativt mål 2025 nr. 1**
+
+Vi konseptualiserer og utvikler innsiktsbaserte gruppeløsninger for rekruttering og arbeidsinkludering som skal hjelpe arbeidsgivere å lykkes med å ansette relevante personer.
+:::
+
+::: {.valuebox color="primary"}
+**Operativt mål 2025 nr. 2**
+
+Forbedre samhandlingen mellom arbeidsgiver og NAV ved å styrke sammenhengen mellom de digitale verktøyene våre.
+:::
+
+::: {.valuebox color="primary"}
+**Operativt mål 2025 nr. 3**
+
+NAVs tjenester skal gjøre virksomheter i stand til å forebygge og redusere sykefravær i egen virksomhet.
+:::
+
+## Row
+
+::: {.valuebox color="light"}
+**Nøkkelresultater nr. 1**
+
+To gruppeløsninger en for "stilling" og en "uten konkret stilling"
+
+- Innsikt er konseptualisert
+- Laget POC
+- Testet og gjennomført møter mellom jobbsøker og arbeidsgiver.
+- Justert løsning
+- Implementert
 :::
 
 ::: {.valuebox color="light"}
-Vi bruker et språk på nav.no/arbeidsgiver som arbeidsgivere forstår og har en struktur som gjør det enkelt for arbeidsgivere å finne det de leter etter.
+**Nøkkelresultater nr. 2**
+
+- Digitale verktøy skal støtte opp under behov for helhetlige og koordinerte tjenester til arbeidsgiver, jfr rammeverk for tjenester til arbeidsgiver (NY)
+- Øke andelen brukere av Salesforce Arbeidsgiver som mener løsningen gir god oversikt over relevant informasjon når de skal ha kontakt og samarbeide med arbeidsgivere. Fra 82% i 2024 til 87% i 2025 (Justert etter innspill eiermøte)
+- Øke andelen brukere av Salesforce Arbeidsgiver som opplever at det er raskere og enklere å registrere arbeidsgiver kontakt, med 10% målt mot 2024 (Justert etter innspill eiermøte)
+- Øke andelen arbeidsgivere som er motivert til å forebygge sykefravær
+- Øke trafikken til innhold og verktøy for forebygging av sykefravær med 50 prosent.
+- Øke gjennomføringsgraden for de fire kategoriene (Vil redusere sykefravær og beholde ansatte i jobb, Ansette med støtte fra NAV, Vil rekruttere, Må permittere eller nedbemanne) til 80% (i dag: 71,4%):
+- 95% av arbeidsgivere får gjort det de kom for på Min side - arbeidsgiver
 :::
 
 ::: {.valuebox color="light"}
-Vi skal gjøre det lettere for NAV-ansatte å kartlegge arbeidsgivers behov, og evaluere den tidsbegrensende og målrettede innsatsen.
+**Nøkkelresultater nr. 3**
+
+- Tilpasse de digitale løsningene i tråd med endringer som følger av ny IA-avtale der NAV har forvaltningsansvaret (NY).
+- 80 % av arbeidsgivere opplever at behovsvurdering, samarbeidsplan og evaluering gir økt eierskap til IA-prosessen og bidrar til mer målrettet samarbeid med NAV.
+- 70 % av arbeidsgivere opplever økt kompetanse og motivasjon til å jobbe videre med å redusere og forebygge eget sykefravær etter samarbeid med NAV.
 :::
 
 ```{python}
