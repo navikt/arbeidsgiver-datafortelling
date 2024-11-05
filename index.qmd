@@ -20,6 +20,14 @@ jupyter: python3
 
 # Forsiden
 
+::: {.valuebox color="danger"}
+**UTKAST**
+
+Fortsatt et utkast!
+:::
+
+## Row
+
 ::: {.valuebox color="light"}
 **Vi skaper tillit og tjenester arbeidsgivere trenger for å inkludere.**
 
@@ -47,6 +55,14 @@ Mer info om PO Arbeidsgiver i [Navet](https://navno.sharepoint.com/sites/intrane
 
 
 # Operative mål 2025
+
+## Row
+
+::: {.valuebox color="danger"}
+**UTKAST**
+
+Fortsatt et utkast!
+:::
 
 ## Row
 ::: {.valuebox color="light"}
