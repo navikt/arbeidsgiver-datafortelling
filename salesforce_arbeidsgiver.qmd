@@ -1,0 +1,30 @@
+# Salesforce Arbeidsgiver
+
+## Row
+
+::: {.valuebox color="danger"}
+**UTKAST**
+
+Fortsatt et utkast!
+:::
+
+## Row
+
+::: {.valuebox color="light"}
+**Salesforce Arbeidsgiver**
+
+CRM-løsning som gir oversikt over NAVs relasjon til arbeidsgiverne. Oversikten legger til rette for bedre dialog og samhandling mellom NAV og arbeidsgiverne.
+:::
+
+::: {.valuebox color="light"}
+**Mål 2025**
+
+(?)
+:::
+
+::: {.valuebox color="warning"}
+**NB!**
+
+Dette er ikke offisiell statistikk og må ikke deles utenfor NAV.
+:::
+
