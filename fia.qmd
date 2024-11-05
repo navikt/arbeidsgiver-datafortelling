@@ -41,7 +41,7 @@ antall_behovsvurdering_per_maaned = bq_client.query(query=query).to_dataframe()
 ## Row
 ```{python}
 #| component: valuebox
-#| title: Antall saker i status "Vi bistår"
+#| title: Antall virksomheter i bistand nå
 dict(
     color = "light",
     value = f"{antall_saker_i_bistand:,}".replace(",", " ")
@@ -50,7 +50,7 @@ dict(
 
 ```{python}
 #| component: valuebox
-#| title: Totalt antall personer påvirket av saker i status "Vi bistår"
+#| title: Potensielt totalt antall personer påvirket av samarbeidet med virksomheter i bistand nå
 dict(
     color = "light",
     value = f"{sum_antall_personer:,}".replace(",", " ")
