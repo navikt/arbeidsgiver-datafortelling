@@ -28,6 +28,12 @@ NAVs tjenester skal gjøre virksomheter i stand til å forebygge og redusere syk
 Dette er ikke offisiell statistikk og må ikke deles utenfor NAV.
 :::
 
+::: {.valuebox color="primary"}
+**Sist oppdatert**
+
+Dataene var sist oppdatert: `{python} now`
+:::
+
 ```{python}
 query = "select * from `pia-prod-85b2.pia_bigquery_sink_v1_dataset_prod.pia_til_felles_dashboard_saker_i_bistand`"
 df = bq_client.query(query=query).to_dataframe()

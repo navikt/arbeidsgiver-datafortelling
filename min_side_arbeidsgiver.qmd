@@ -26,6 +26,12 @@ Her kan man kanskje skrive mål for 2025?
 Dette er ikke offisiell statistikk og må ikke deles utenfor NAV.
 :::
 
+::: {.valuebox color="primary"}
+**Sist oppdatert**
+
+Dataene var sist oppdatert: `{python} now`
+:::
+
 ```{python}
 query_fager = "select * from `fager-prod-dd77.notifikasjon_platform_dataset.fager_til_po_felles_dashboard`"
 df_fager = bq_client.query(query=query_fager).to_dataframe()

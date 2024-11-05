@@ -134,9 +134,14 @@ To gruppeløsninger en for "stilling" og en "uten konkret stilling"
 ```{python}
 from google.cloud.bigquery import Client
 import plotly.graph_objects as go
+from datetime import datetime
+import pytz
 
 project = "arbeidsgiver-data-prod-bb88"
 bq_client = Client(project)
+
+tz = pytz.timezone("Europe/Oslo")
+now = datetime.now(tz).strftime("%d.%m.%Y %H:%M")
 ```
 
 {{< include min_side_arbeidsgiver.qmd >}}

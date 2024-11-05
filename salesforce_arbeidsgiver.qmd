@@ -28,3 +28,8 @@ CRM-løsning som gir oversikt over NAVs relasjon til arbeidsgiverne. Oversikten 
 Dette er ikke offisiell statistikk og må ikke deles utenfor NAV.
 :::
 
+::: {.valuebox color="primary"}
+**Sist oppdatert**
+
+Dataene var sist oppdatert: `{python} now`
+:::
