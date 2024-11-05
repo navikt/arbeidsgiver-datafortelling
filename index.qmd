@@ -9,6 +9,9 @@ format:
         embed-resources: true
         scrolling: true
         nav-buttons:
+            - icon: arrow-up-right-square
+              href: https://data.ansatt.nav.no/story/53cb8677-59b8-4de4-86bc-7bfff29d39cd/index.html
+              target: _blank
             - icon: github
               href: https://github.com/navikt/arbeidsgiver-datafortelling
               target: _blank
