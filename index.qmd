@@ -5,6 +5,7 @@ execute:
     warning: false
 format:
     dashboard:
+        theme: cosmo
         embed-resources: true
         scrolling: true
         nav-buttons:
