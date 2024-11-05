@@ -2,10 +2,22 @@
 
 ## Row
 
-::: {.callout-note}
-<span style="color:red;">
-NB! Dette er ikke offisiell statistikk og må ikke deles utenfor NAV.
-</span>
+::: {.valuebox color="light"}
+**Min side Arbeidsgiver**
+
+Binder sammen alle innloggede tjenester som andre team lager for arbeidsgiver.
+:::
+
+::: {.valuebox color="light"}
+**Mål 2025**
+
+Her kan man kanskje skrive mål for 2025?
+:::
+
+::: {.valuebox color="warning"}
+**NB!**
+
+Dette er ikke offisiell statistikk og må ikke deles utenfor NAV.
 :::
 
 ```{python}

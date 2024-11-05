@@ -2,10 +2,22 @@
 
 ## Row
 
-::: {.callout-note}
-<span style="color:red;">
-NB! Dette er ikke offisiell statistikk og må ikke deles utenfor NAV.
-</span>
+::: {.valuebox color="light"}
+**Fia**
+
+Fia skal gi mer målrettet og profesjonalisert oppfølging av virksomhetene som er prioritert for IA-bistand fra NAV.
+:::
+
+::: {.valuebox color="light"}
+**Mål 2025**
+
+NAVs tjenester skal gjøre virksomheter i stand til å forebygge og redusere sykefravær i egen virksomhet. (?)
+:::
+
+::: {.valuebox color="warning"}
+**NB!**
+
+Dette er ikke offisiell statistikk og må ikke deles utenfor NAV.
 :::
 
 ```{python}
