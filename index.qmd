@@ -10,8 +10,10 @@ format:
         nav-buttons:
             - icon: github
               href: https://github.com/navikt/arbeidsgiver-datafortelling
+              target: _blank
             - icon: slack
               href: https://nav-it.slack.com/archives/CCM649PDH
+              target: _blank
 jupyter: python3
 ---
 
