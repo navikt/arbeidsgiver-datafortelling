@@ -62,7 +62,7 @@ fig.show()
 
 ## Per merkelapp
 ```{python}
-#| title: Antall eksterne varsler sendt til Min side Arbeidsgiver
+#| title: Antall eksterne varsler sendt
 df_fager_2024 = df_fager[df_fager.month.str.startswith("2024")]
 fig = go.Figure()
 for merkelapp in df_fager_2024.merkelapp.unique():
