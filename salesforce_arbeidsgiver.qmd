@@ -33,3 +33,97 @@ Dette er ikke offisiell statistikk og må ikke deles utenfor NAV.
 
 Dataene var sist oppdatert: `{python} now`
 :::
+
+```{python}
+# Henter data fra BigQuery.
+
+# Tilgang til viewene må være satt opp i Datamarkedsplassen for at dette skal funke i naisjobben.
+# Les README.md for mer informasjon om hvordan det gjøres.
+
+query = "select * from `team-dialog-prod-c4ee.arbeidsgiver_aktivitet.arbeidsgiver_moeter_antall`"
+df_moeter = bq_client.query(query=query).to_dataframe()
+
+query = "select * from `team-dialog-prod-c4ee.arbeidsgiver_aktivitet.arbeidsgiver_oppgaver_antall`"
+df_oppgaver = bq_client.query(query=query).to_dataframe()
+```
+
+## Row
+```{python}
+#| title: Antall aktiviteter
+
+# Datasettene inneholder antall aktiviteter per måned og tema. Så her summerer vi opp antall aktiviteter per måned, for å inkludere alle temaene.
+# "reset_index()" er brukt for å få en flat struktur på datasettet, tilbake til en DataFrame i stedet for en Series.
+moeter_per_maaned = df_moeter.groupby("moete_maaned").antall_moeter.sum().reset_index()
+oppgaver_per_maaned = df_oppgaver.groupby("forfallsdato_maaned").antall_oppgaver.sum().reset_index()
+
+fig = go.Figure()
+fig = fig.add_trace(
+    go.Scatter(
+        x=moeter_per_maaned.moete_maaned,
+        y=moeter_per_maaned.antall_moeter,
+        mode="lines+markers",
+        name="Antall møter"
+    )
+)
+fig = fig.add_trace(
+    go.Scatter(
+        x=oppgaver_per_maaned.forfallsdato_maaned,
+        y=oppgaver_per_maaned.antall_oppgaver,
+        mode="lines+markers",
+        name="Antall oppgaver"
+    )
+)
+fig = fig.update_layout(
+    xaxis_title="Måned",
+    yaxis_title="Antall aktiviteter"
+)
+fig.show()
+```
+
+## Row
+```{python}
+#| title: Antall møter per tema
+fig = go.Figure()
+
+# Loop over alle temaene og legger til en linje for hvert tema.
+# Sorterer temaene etter antall møter, slik at de mest populære temaene kommer først.
+for tema in df_moeter.sort_values("antall_moeter", ascending=False).tema.unique():
+    df_moeter_tema = df_moeter[df_moeter.tema == tema]
+    fig = fig.add_trace(
+        go.Scatter(
+            x=df_moeter_tema.moete_maaned,
+            y=df_moeter_tema.antall_moeter,
+            mode="lines+markers",
+            name=tema
+        )
+    )
+
+fig = fig.update_layout(
+    xaxis_title="Måned (møtedato)",
+    yaxis_title="Antall møter"
+)
+fig.show()
+```
+
+## Row
+```{python}
+#| title: Antall oppgaver per tema
+fig = go.Figure()
+
+for tema in df_oppgaver.sort_values("antall_oppgaver", ascending=False).tema.unique():
+    df_oppgaver_tema = df_oppgaver[df_oppgaver.tema == tema]
+    fig = fig.add_trace(
+        go.Scatter(
+            x=df_oppgaver_tema.forfallsdato_maaned,
+            y=df_oppgaver_tema.antall_oppgaver,
+            mode="lines+markers",
+            name=tema
+        )
+    )
+
+fig = fig.update_layout(
+    xaxis_title="Måned (forfallsdato)",
+    yaxis_title="Antall oppgaver"
+)
+fig.show()
+```
