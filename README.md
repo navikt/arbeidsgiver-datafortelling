@@ -23,10 +23,13 @@ Koden som genererer et [felles dashboard](https://data.ansatt.nav.no/productArea
 7. Kjør nais-jobben for å oppdatere dashboardet (se "Adhoc kjøring av naisjobben")
 
 ## Legge til ny metrikk i datafortellingen
-1. Lage en view med metrikkene du trenger i BigQuery
-    - Ikke del hele datasettet, kun metrikker akkumuert på riktig nivå (uten personopplysninger! eller andre info som ikke skal deles utenfor teamet ditt)
-2. Dele viewet med `arbeidsgiver-data@nav.no` i Datamarkedsplassen
-3. Nå er du klar til å lage en Python/Quqarto-script. Hent dataene ved å opprette en klient med GCP-prosjektet `arbeidsgiver-data-prod-bb88` og kjøre en spørring, for eks: ``select * from `<teamets-prosjekt>.<datasett>.<view>` ``
+1. Lage et view med metrikkene du trenger i [BigQuery](https://console.cloud.google.com/bigquery) ved å lagre en spørring som et view i teamets prosjekt
+    - Vær oppmerksom: Ikke del hele datasettet/tabellen! Kun metrikker akkumuert på riktig nivå (uten personopplysninger eller andre info som ikke skal deles utenfor teamet ditt)
+2. Autoriser BigQuery til å dele viewet ved å klikke på datasettet (ikke viewet/tabellen) i BigQuery, velge "Sharing", "Autorize Views" og så legge til viewet
+3. Dele viewet med `arbeidsgiver-data@nav.no` i Datamarkedsplassen
+    - [Opprett et nytt dataprodukt](https://data.ansatt.nav.no/dataproduct/new) om teamet ditt ikke har et allerede.
+    - Eller legg til viewet som et datasett i et [eksisterende dataprodukt](https://data.ansatt.nav.no/user/products)
+4. Nå er du klar til å lage en Python/Quarto-script. Hent dataene ved å opprette en klient med GCP-prosjektet `arbeidsgiver-data-prod-bb88` og kjøre en spørring, for eks: ``select * from `<teamets-prosjekt>.<datasett>.<view>` ``
 
 ## Deploy
 Prosjektet bygges med github [workflow](https://docs.github.com/en/actions/writing-workflows/about-workflows) og deployes til NAIS som en [NAIS job](https://docs.nais.io/workloads/job/).
@@ -38,7 +41,9 @@ NAIS-jobben kjører i forhold til en cronjob som er definert i [nais.yaml](https
 2. Gå til cluster prod-gcp i kubectl: `kubectx prod-gcp`
 3. Sett namespace: `kubens arbeidsgiver-data`
 4. Finn cronjobben for datafortellingen: `kubectl get cronjobs | grep arbeidsgiver-datafortelling`
-5. Trigg jobben: `kubectl create job --from=cronjob/arbeidsgiver-datafortelling arbeidsgiver-datafortelling-ad-hoc`
+5. Husk å vente på at endringene er deployet før du kjører jobben
+6. Trigg jobben: `kubectl create job --from=cronjob/arbeidsgiver-datafortelling arbeidsgiver-datafortelling-ad-hoc`
+7. Du kan følge med på jobber [her](https://console.nav.cloud.nais.io/team/arbeidsgiver-data/prod-gcp/job/arbeidsgiver-datafortelling)
 
 ## Oppdater dashboardet manuelt, uten naisjobb
 Ikke anbefalt, men mulig å bruke. 
