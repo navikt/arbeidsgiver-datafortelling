@@ -1,6 +1,8 @@
 # arbeidsgiver-datafortelling
 Koden som genererer et [felles dashboard](https://data.ansatt.nav.no/productArea/2b4149d1-b18b-4111-923f-d7bcfdd55ba1) for PO Arbeidsgiver i Datamarkedsplassen.
 
+Alle ansatte i Nav har tilgang til dashboardet.
+
 # Oppsett
 1. Installer Python3
 2. Klon repoet og naviger til mappen
@@ -26,9 +28,8 @@ Koden som genererer et [felles dashboard](https://data.ansatt.nav.no/productArea
 1. Lage et view med metrikkene du trenger i [BigQuery](https://console.cloud.google.com/bigquery) ved å lagre en spørring som et view i teamets prosjekt
     - Vær oppmerksom: Ikke del hele datasettet/tabellen! Kun metrikker akkumuert på riktig nivå (uten personopplysninger eller andre info som ikke skal deles utenfor teamet ditt)
 2. Autoriser BigQuery til å dele viewet ved å klikke på datasettet (ikke viewet/tabellen) i BigQuery, velge "Sharing", "Autorize Views" og så legge til viewet
-3. Dele viewet med `arbeidsgiver-data@nav.no` i Datamarkedsplassen
-    - [Opprett et nytt dataprodukt](https://data.ansatt.nav.no/dataproduct/new) om teamet ditt ikke har et allerede.
-    - Eller legg til viewet som et datasett i et [eksisterende dataprodukt](https://data.ansatt.nav.no/user/products)
+3. Hvis teamet ikke har et passende [eksisterende dataprodukt](https://data.ansatt.nav.no/user/products) i Datamarkedsplassen, [opprett et nytt](https://data.ansatt.nav.no/dataproduct/new)
+4. Under viewet i Datamarkedsplassen, gi tilgang til gruppen `nais-team-arbeidsgiver-data@nav.no` og serviceaccounten `arbeidsgive-arbeidsgiv-qwdkxcq@nais-prod-020f.iam.gserviceaccount.com`
 4. Nå er du klar til å lage en Python/Quarto-script. Hent dataene ved å opprette en klient med GCP-prosjektet `arbeidsgiver-data-prod-bb88` og kjøre en spørring, for eks: ``select * from `<teamets-prosjekt>.<datasett>.<view>` ``
 
 ## Deploy
@@ -58,7 +59,7 @@ Ikke anbefalt, men mulig å bruke.
 # Henvendelser
 Spørsmål knyttet til koden eller prosjektet kan stilles som et [issue her på GitHub](https://github.com/navikt/arbeidsgiver-datafortelling/issues).
 ## For NAV-ansatte
-Interne henvendelser kan sendes via Slack i kanalen #arbeidsgiver-utvikling eller #arbeidsgiver-general.
+Interne henvendelser kan sendes via Slack i kanalen #arbeidsgiver-general.
 
 # Krediteringer
 ## Kode generert av GitHub Copilot
