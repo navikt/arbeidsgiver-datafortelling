@@ -41,7 +41,7 @@ antall_saker_i_bistand = int(df.antall_saker_i_bistand[0])
 sum_antall_personer = int(df.sum_antall_personer[0])
 
 query = "select * from `pia-prod-85b2.pia_bigquery_sink_v1_dataset_prod.pia_til_felles_dashboard_behovsvurdering`"
-antall_behovsvurdering_per_maaned = bq_client.query(query=query).to_dataframe()
+antall_survey_per_maaned = bq_client.query(query=query).to_dataframe()
 ```
 
 ## Row
@@ -70,26 +70,91 @@ For mer info om Fia, sjekk [Fia datafortelling](https://data.ansatt.nav.no/story
 ## Row
 ```{python}
 #| title: Antall opprettet og fullført behovsvurdering
+
+behov_kolonner = [
+    "antall_opprettet_behovsvurdering",
+    "antall_fullfort_behovsvurdering",
+    "antall_fullfort_behovsvurdering_med_svar"
+]
+antall_behov_per_maaned = antall_survey_per_maaned.dropna(
+        subset=behov_kolonner, how="all"
+    )[["maaned"] + behov_kolonner].fillna(0)
+
 fig = go.Figure()
 fig = fig.add_trace(
     go.Scatter(
-        x=antall_behovsvurdering_per_maaned.maaned,
-        y=antall_behovsvurdering_per_maaned.antall_opprettet_behovsvurdering,
+        x=antall_behov_per_maaned.maaned,
+        y=antall_behov_per_maaned.antall_opprettet_behovsvurdering,
         mode="lines+markers",
         name="Opprettet behovsvurdering"
     )
 )
 fig = fig.add_trace(
     go.Scatter(
-        x=antall_behovsvurdering_per_maaned.maaned,
-        y=antall_behovsvurdering_per_maaned.antall_fullfort_behovsvurdering,
+        x=antall_behov_per_maaned.maaned,
+        y=antall_behov_per_maaned.antall_fullfort_behovsvurdering,
         mode="lines+markers",
         name="Fullført behovsvurdering"
     )
 )
+fig = fig.add_trace(
+    go.Scatter(
+        x=antall_behov_per_maaned.maaned,
+        y=antall_behov_per_maaned.antall_fullfort_behovsvurdering_med_svar,
+        mode="lines+markers",
+        name="Fullført behovsvurdering med minst ett svar"
+    )
+)
 fig = fig.update_layout(
     xaxis_title="Måned",
-    yaxis_title="Antall"
+    yaxis_title="Antall",
+    xaxis_type="category"
+)
+fig.show()
+```
+
+## Row
+```{python}
+#| title: Antall opprettet og fullført evaluering
+
+eval_kolonner = [
+    "antall_opprettet_evaluering",
+    "antall_fullfort_evaluering",
+    "antall_fullfort_evaluering_med_svar"
+]
+antall_eval_per_maaned = antall_survey_per_maaned.dropna(
+        subset=eval_kolonner, how="all"
+    )[["maaned"] + eval_kolonner].fillna(0)
+
+fig = go.Figure()
+fig = fig.add_trace(
+    go.Scatter(
+        x=antall_eval_per_maaned.maaned,
+        y=antall_eval_per_maaned.antall_opprettet_evaluering,
+        mode="lines+markers",
+        name="Opprettet evaluering"
+    )
+)
+fig = fig.add_trace(
+    go.Scatter(
+        x=antall_eval_per_maaned.maaned,
+        y=antall_eval_per_maaned.antall_fullfort_evaluering,
+        mode="lines+markers",
+        name="Fullført evaluering"
+    )
+)
+fig = fig.add_trace(
+    go.Scatter(
+        x=antall_eval_per_maaned.maaned,
+        y=antall_eval_per_maaned.antall_fullfort_evaluering_med_svar,
+        mode="lines+markers",
+        name="Fullført evaluering med minst ett svar"
+    )
+)
+fig = fig.update_layout(
+    xaxis_title="Måned",
+    yaxis_title="Antall",
+    xaxis_type="category"
 )
 fig.show()
 ```
