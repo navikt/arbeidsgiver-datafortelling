@@ -38,10 +38,6 @@ df_fager = bq_client.query(query=query_fager).to_dataframe()
 ```
 
 ## Row
-
-::: {.panel-tabset}
-
-## Totalt
 ```{python}
 #| title: Antall eksterne varsler sendt
 totalt_antall_varsler = df_fager.groupby("month")["count"].sum()
@@ -60,9 +56,9 @@ fig = fig.update_layout(
 fig.show()
 ```
 
-## Per merkelapp
+## Row
 ```{python}
-#| title: Antall eksterne varsler sendt
+#| title: Antall eksterne varsler sendt per merkelapp
 df_fager_2024 = df_fager[df_fager.month.str.startswith("2024")]
 fig = go.Figure()
 for merkelapp in df_fager_2024.merkelapp.unique():
@@ -81,5 +77,3 @@ fig = fig.update_layout(
 )
 fig.show()
 ```
-
-:::
