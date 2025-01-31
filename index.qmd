@@ -82,10 +82,29 @@ Arbeidsgivere får tjenester som støtter behov og omstillingsprosesser i virkso
 :::
 
 ## Row
+::: {.valuebox color="light"}
+**PO Ambisjon nr. 1**
+
+Arbeidsgivere hjelper flere fra prioritert målgruppe inn i jobb​.
+:::
+
+::: {.valuebox color="light"}
+**PO Ambisjon nr. 2**
+
+NAV er helhetlig og koordinert i møte med arbeidsgivere​.
+:::
+
+::: {.valuebox color="light"}
+**PO Ambisjon nr. 3**
+
+Arbeidsgiver får nødvendig hjelp slik at arbeidstakere ikke faller ut av arbeidslivet​​.
+:::
+
+## Row
 ::: {.valuebox color="primary"}
 **Operativt mål 2025 nr. 1**
 
-Vi konseptualiserer og utvikler innsiktsbaserte gruppeløsninger for rekruttering og arbeidsinkludering som skal hjelpe arbeidsgivere å lykkes med å ansette relevante personer.
+Rammebetingelser avklares og systemløsninger videreutvikles slik at NAV blir bedre til å dekke arbeidsgiveres behov for arbeidskraft.
 :::
 
 ::: {.valuebox color="primary"}
@@ -97,7 +116,7 @@ Forbedre samhandlingen mellom arbeidsgiver og NAV ved å styrke sammenhengen mel
 ::: {.valuebox color="primary"}
 **Operativt mål 2025 nr. 3**
 
-NAVs tjenester skal gjøre virksomheter i stand til å forebygge og redusere sykefravær i egen virksomhet.
+NAVs tjenester skal gjøre virksomheter i stand til å forebygge og redusere sykefravær i egen virksomhet .
 :::
 
 ## Row
@@ -117,21 +136,21 @@ To gruppeløsninger en for "stilling" og en "uten konkret stilling"
 ::: {.valuebox color="light"}
 **Nøkkelresultater nr. 2**
 
-- Digitale verktøy skal støtte opp under behov for helhetlige og koordinerte tjenester til arbeidsgiver, jfr rammeverk for tjenester til arbeidsgiver (NY)
-- Øke andelen brukere av Salesforce Arbeidsgiver som mener løsningen gir god oversikt over relevant informasjon når de skal ha kontakt og samarbeide med arbeidsgivere. Fra 82% i 2024 til 87% i 2025 (Justert etter innspill eiermøte)
-- Øke andelen brukere av Salesforce Arbeidsgiver som opplever at det er raskere og enklere å registrere arbeidsgiver kontakt, med 10% målt mot 2024 (Justert etter innspill eiermøte)
-- Øke andelen arbeidsgivere som er motivert til å forebygge sykefravær
-- Øke trafikken til innhold og verktøy for forebygging av sykefravær med 50 prosent.
-- Øke gjennomføringsgraden for de fire kategoriene (Vil redusere sykefravær og beholde ansatte i jobb, Ansette med støtte fra NAV, Vil rekruttere, Må permittere eller nedbemanne) til 80% (i dag: 71,4%):
-- 95% av arbeidsgivere får gjort det de kom for på Min side - arbeidsgiver
+- Digitale verktøy skal støtte opp under behov for helhetlige og koordinerte tjenester til arbeidsgiver, jfr rammeverk for tjenester til arbeidsgiver​
+- Øke andelen brukere av Salesforce Arbeidsgiver som mener løsningen gir god oversikt over relevant informasjon når de skal ha kontakt og samarbeide med arbeidsgivere. Fra 82% i 2024 til 87% i 2025 ​
+- Øke andelen brukere av Salesforce Arbeidsgiver som opplever at det er raskere og enklere å registrere arbeidsgiver kontakt, med 10% målt mot 2024 ​
+- 95% av arbeidsgivere får gjort det de kom for på Min side – arbeidsgiver
 :::
 
 ::: {.valuebox color="light"}
 **Nøkkelresultater nr. 3**
 
-- Tilpasse de digitale løsningene i tråd med endringer som følger av ny IA-avtale der NAV har forvaltningsansvaret (NY).
-- 80 % av arbeidsgivere opplever at behovsvurdering, samarbeidsplan og evaluering gir økt eierskap til IA-prosessen og bidrar til mer målrettet samarbeid med NAV.
-- 70 % av arbeidsgivere opplever økt kompetanse og motivasjon til å jobbe videre med å redusere og forebygge eget sykefravær etter samarbeid med NAV.
+- Tilpasse de digitale løsningene i tråd med endringer som følger av eventuell ny IA-avtale der NAV har forvaltningsansvaret ​
+- 80 % av arbeidsgivere opplever at behovsvurdering, samarbeidsplan og evaluering gir økt eierskap til prosessen med å forebygge og redusere sykefravær, og bidrar til mer målrettet samarbeid med NAV.​
+- 70 % av arbeidsgivere opplever økt kompetanse og motivasjon til å jobbe videre med å redusere og forebygge eget sykefravær etter samarbeid med NAV. ​
+- Øke andelen arbeidsgivere som er motivert til å forebygge sykefravær​
+- Øke trafikken til innhold og verktøy for forebygging av sykefravær med 50 prosent​
+- Øke gjennomføringsgraden for de fire kategoriene (Vil redusere sykefravær og beholde ansatte i jobb, Ansette med støtte fra NAV, Vil rekruttere, Må permittere eller nedbemanne) til 80% (i dag: 71,4%)
 :::
 
 ```{python}
